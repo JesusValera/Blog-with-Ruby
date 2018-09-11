@@ -1,0 +1,20 @@
+# Create new project.
+ rails new {AppName}
+
+# Start server ( http://0.0.0.0:3000/ ).
+ rails s
+
+# Create a model (g means generate):
+ rails g model {ModelName} {attr1}:string {attr2}:text
+
+# Create a controller (the name should be in plural).
+ rails g controller {ControllerName}
+
+# Migrate (update) BD.
+ rails db:migrate
+
+# Open Rails console:
+ rails c
+
+    -> {ModelName}.all => The previous command shows all the elements from db.
+
