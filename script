@@ -20,4 +20,4 @@
  rails c
 
     -> {ModelName}.all => The previous command shows all the elements from db.
-
+    -> {ModelName}.create!({attr1}: ". . .", {attr2}: ". . .") => Insert data into DB.

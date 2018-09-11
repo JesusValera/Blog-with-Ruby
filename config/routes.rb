@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   resources :blogs
 
+  ## Create a new resource/path.
   get 'about', to: 'blogs#about'
 
+  ## Set application's root.
   root 'blogs#index'
 
 end

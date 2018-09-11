@@ -1,9 +1,8 @@
 class BlogsController < ApplicationController
 
-
-  def about
-
-
+  def index
+    ## Set a variable to all Blogs inside the database.
+    @blogs = Blog.all
   end
 
 end
