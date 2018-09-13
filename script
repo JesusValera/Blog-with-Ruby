@@ -1,6 +1,9 @@
 # Create new project.
  rails new {AppName}
 
+# Update gems from Gemfile
+ bundle install
+
 # Start server ( http://0.0.0.0:3000/ ).
  rails s
 
