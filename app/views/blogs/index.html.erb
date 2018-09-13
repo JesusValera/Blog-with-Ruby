@@ -2,4 +2,8 @@
 
 <% @blogs.each do |blog| %>
   <h3><%= link_to blog.title, blog_path(blog) %></h3>
+
 <% end %>
+
+<p><%= link_to "Create new Post", new_blog_path %></p>
+<!--<p><%#= link_to "Create new Post", :action => :new %></p>-->
