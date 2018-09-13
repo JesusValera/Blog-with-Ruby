@@ -1,12 +1,22 @@
-<h2>This is our form</h2>
-
 <%= form_with model: @blog, local: true do |blog| %>
 
-  <%= blog.text_field :title %>
-  <br>
-  <%#= blog.password_field :password %>
-  <%= blog.text_area :content %>
-  <br>
-  <%= blog.submit %>
+  <%= render 'errors' %>
 
+  <p><%= blog.label :title %>
+    <%= blog.text_field :title %>
+    <br>
+  </p>
+
+  <p>
+    <%= blog.label :content %>
+    <%= blog.text_area :content %>
+    <br>
+  </p>
+
+  <p>
+    <%= blog.submit "Add a new post" %>
+  </p>
+
+
+<%#= blog.password_field :password %>
 <% end %>
