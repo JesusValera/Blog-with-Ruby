@@ -24,4 +24,18 @@ class BlogsController < ApplicationController
 
   end
 
+  def edit
+    @blog = Blog.find(params[:id])
+  end
+
+  def update
+    @blog = Blog.find(params[:id])
+
+    if @blog.update(params.require(:blog).permit(:title, :content))
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
 end

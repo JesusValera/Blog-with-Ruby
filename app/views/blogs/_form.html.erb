@@ -1,6 +1,6 @@
 <h2>This is our form</h2>
 
-<%= form_with scope: :blog, url: blogs_path, local: true do |blog| %>
+<%= form_with model: @blog, local: true do |blog| %>
 
   <%= blog.text_field :title %>
   <br>
