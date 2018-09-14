@@ -1,11 +1,23 @@
-<h1>Index site</h1>
+<h1 class="margin_title">Index site</h1>
 
-<% @blogs.each do |blog| %>
-  <h3><%= link_to blog.title, blog_path(blog) %></h3>
-  <p><%= link_to "Edit", edit_blog_path(blog) %> |
-  <%= link_to "Delete", blog, :method => :delete %></p>
-  <hr>
-<% end %>
+<div class="row">
 
+  <% @blogs.each do |blog| %>
+
+    <div class="col-md-4" id="card_margin">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to blog.title, blog_path(blog) %></h5>
+          <p class="card-text"><%= blog.content %></p>
+
+          <%= link_to 'Edit', edit_blog_path(blog), class: 'btn btn-outline-primary' %>
+          <%= link_to "Delete", blog_path(blog), :method => :delete, class: 'btn btn-outline-danger', data: {confirm: 'Are you sure?'} %>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+
+</div>
+<hr>
 <p><%= link_to "Create new Post", new_blog_path %></p>
-<!--<p><%#= link_to "Create new Post", :action => :new %></p>-->

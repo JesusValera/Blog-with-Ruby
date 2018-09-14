@@ -1,22 +1,23 @@
 <%= form_with model: @blog, local: true do |blog| %>
 
-  <%= render 'errors' %>
+  <form>
 
-  <p><%= blog.label :title %>
-    <%= blog.text_field :title %>
-    <br>
-  </p>
-
-  <p>
-    <%= blog.label :content %>
-    <%= blog.text_area :content %>
-    <br>
-  </p>
-
-  <p>
-    <%= blog.submit "Add a new post" %>
-  </p>
+    <div class="form-group row">
+      <%= blog.label :title, for: 'title_input', class: "col-sm-2 col-form-label" %>
+      <%= blog.text_field :title, class: 'form-control col-sm-10', id: 'title_input' %>
+    </div>
 
 
-<%#= blog.password_field :password %>
+    <div class="form-group row">
+      <%= blog.label :content, for: 'content_input', class: "col-sm-2 col-form-label" %>
+      <%= blog.text_area :content, class: 'form-control col-sm-10', id: 'content_input' %>
+    </div>
+
+    <%= blog.submit "Add or update post", class: 'btn btn-outline-primary' %>
+
+  </form>
+
 <% end %>
+
+
+<%= render 'errors' %>
